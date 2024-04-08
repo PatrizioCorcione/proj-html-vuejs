@@ -17,10 +17,10 @@ export default {
 
     <div class="container ">
       <div class="row row-cols-2 ">
-        <div class="col">
+        <div class="col logo">
           <img src="/src/assets/img/author-logo-round-200x205.png" alt="">
         </div>
-        <div class="col">
+        <div class="col navwhi">
           <nav class="navbar navbar-expand">
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNav">
@@ -47,7 +47,7 @@ export default {
                     <a class="nav-link text-white " href="#">Pricing</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white " href="#">fontaweson</a>
+                    <a class="nav-link text-white " href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                   </li>
                 </ul>
               </div>
@@ -59,14 +59,14 @@ export default {
     <div class="hero container-custom">
       
         <div class="">
-          <h1>ciccio pasticcio</h1>
-          <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat iste repudiandae eveniet</h2>
-          <p>- lorem ipsum</p>
+          <h1>Damon Vaughn</h1>
+          <h2>Beast-selling autors and the most influential public intellectual in the wester world right now.</h2>
+          <p>- The New York Times</p>
           <span class="btn btn-dark ">
-            &lArr;
+            <i class="fa-solid fa-arrow-left"></i>
           </span>
           <span class="btn btn-dark ">
-            &rAarr;
+            <i class="fa-solid fa-arrow-right"></i>
           </span>
 
         </div>
@@ -76,23 +76,32 @@ export default {
               <img src="/src/assets/img/book-widget.png" alt="">
             </div>
             <div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nemo aspernatur soluta quos voluptatibus minus nulla inventore repudiand</p>
+              <h3>Latest book relase</h3>
+              <p class="text-shop">D. Vaughn autobiography</p>
+              <p class="desc-Shop">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nemo aspernatur soluta quos voluptatibus </p>
             </div>
           </div>
 
-          <div class="flex-row ">
-            <span type="button" class="btn btn-outline-light">Light</span>
-            <span type="button" class="btn btn-outline-light">Light</span>
-
+          <div class="shopBtn">
+            <span type="button" class="btn btn-outline-light btn-amazon"><i class="fa-brands fa-amazon"></i> By on Amazon</span>
+            <span type="button" class="btn btn-outline-light btn-apple"><i class="fa-brands fa-apple"></i> By on Appstore</span>
           </div>
         </div>
-      
     </div>
+    
+
   </header>
   
 </template>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
+@import '../assets/scss/partials/_variables';
+@import '../assets/scss/partials/_tipography';
+
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
 header{
   position: relative;
   background-image: url(/src/assets/img/footer-3.jpg);
@@ -102,38 +111,109 @@ header{
     img{
       width: 30%;
     }
+    .logo{
+      width: 40%;
+    }
+    .navwhi{
+      width: 60%;
+      .navbar{
+        padding: 0;
+      }
+    }
     .collapse{
       flex-direction: row-reverse;
+      li{
+        margin-right: 20px;
+        &:hover{
+          
+          border-top: 3px solid $prymari-clr;
+          a{
+            color: $prymari-clr !important;
+          }
+        }
+        
+      }
+      .fa-cart-shopping{
+        font-size: $font-s;
+        line-height: 25px;
+      }
     }
   }
   .hero{
-    color: white;
+    color: $light-clr;
     margin: 0 auto;
     width: 72%;
     h1{
-      color: rgb(255, 234, 0);
+      line-height: 90px;
+      color: $prymari-clr;
+      font-family:"Birthstone Bounce", cursive ;
     }
     h2{
+      line-height: 50px;
       width: 50%;
+      font-family: "Playfair Display", serif;
+      font-weight: bold;
     }
     p{
-      color: gray;
+      color: $tundra-clr;
     }
     span{
-      background-color: rgba(0, 0, 0, 0.32);
+      background-color: $dark-clr;
       margin-right: 2px;
+      padding: 10px;
+      font-size: $font-s;
+      &:hover{
+        border: 1px solid darken($secondari-clr, 20%)!important;
+      }
     }
     .imgbookphon{
-      img{
-        width: 180px;
-      }
       right: 0;
       position: absolute;
-      background-color: white;
+      background-color: $light-clr;
       width: 37%;
       bottom: 0%;
       padding: 30px 30px 20px 30px;
+      img{
+        width: 180px;
+      }
+      h3{
+        font-size: $font-n;
+        color: $dark-clr;
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+      }
+      .text-shop{
+        font-size:$font-s ;
+        color: $prymari-clr;
+        text-transform: uppercase;
+      }
+      .desc-shop{
+        font-size:$font-s ;
+      }
+      .shopBtn{
+        text-align: center;
+        span{
+          margin: 0;
+          background-color: $light-clr;
+          color: $dark-clr;
+          border: 1px solid $secondari-clr;
+          width: 50%;
+        }
+        .btn-amazon{
+          border-radius: 5px 0px 0px 5px;
+          padding-left: 20px;
+        }
+        .btn-apple{
+          border-radius: 0px 5px 5px 0px;
+          padding-right: 20px;
+        }
+      }
     }
+  }
+  .badge{
+    position: absolute;
+    right: 0;
+    top: 182px;
   }
 }
 
