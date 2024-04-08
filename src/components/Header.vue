@@ -57,8 +57,36 @@ export default {
       </div>
     </div>
     <div class="hero container-custom">
-      <h1>ciccio pasticcio</h1>
-      <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat iste repudiandae eveniet</h2>
+      
+        <div class="">
+          <h1>ciccio pasticcio</h1>
+          <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat iste repudiandae eveniet</h2>
+          <p>- lorem ipsum</p>
+          <span class="btn btn-dark ">
+            &lArr;
+          </span>
+          <span class="btn btn-dark ">
+            &rAarr;
+          </span>
+
+        </div>
+        <div class="imgbookphon">
+          <div class="d-flex">
+            <div>
+              <img src="/src/assets/img/book-widget.png" alt="">
+            </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nemo aspernatur soluta quos voluptatibus minus nulla inventore repudiand</p>
+            </div>
+          </div>
+
+          <div class="flex-row ">
+            <span type="button" class="btn btn-outline-light">Light</span>
+            <span type="button" class="btn btn-outline-light">Light</span>
+
+          </div>
+        </div>
+      
     </div>
   </header>
   
@@ -66,9 +94,10 @@ export default {
 
 <style lang="scss" scoped>
 header{
+  position: relative;
   background-image: url(/src/assets/img/footer-3.jpg);
   background-size: cover;
-  height: 500px;
+  height: 565px;
   .container{
     img{
       width: 30%;
@@ -81,8 +110,29 @@ header{
     color: white;
     margin: 0 auto;
     width: 72%;
+    h1{
+      color: rgb(255, 234, 0);
+    }
     h2{
       width: 50%;
+    }
+    p{
+      color: gray;
+    }
+    span{
+      background-color: rgba(0, 0, 0, 0.32);
+      margin-right: 2px;
+    }
+    .imgbookphon{
+      img{
+        width: 180px;
+      }
+      right: 0;
+      position: absolute;
+      background-color: white;
+      width: 37%;
+      bottom: 0%;
+      padding: 30px 30px 20px 30px;
     }
   }
 }
