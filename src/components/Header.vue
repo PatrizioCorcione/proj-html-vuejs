@@ -15,7 +15,7 @@ export default {
 <template>
   <header>
 
-    <div class="container-lg ">
+    <div class="container ">
       <div class="row row-cols-2 ">
         <div class="col">
           <img src="/src/assets/img/author-logo-round-200x205.png" alt="">
@@ -56,20 +56,33 @@ export default {
         </div>
       </div>
     </div>
+    <div class="hero container-custom">
+      <h1>ciccio pasticcio</h1>
+      <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat iste repudiandae eveniet</h2>
+    </div>
   </header>
   
 </template>
-
-
 
 <style lang="scss" scoped>
 header{
   background-image: url(/src/assets/img/footer-3.jpg);
   background-size: cover;
-  .container-lg{
-    height: 500px;
+  height: 500px;
+  .container{
+    img{
+      width: 30%;
+    }
     .collapse{
       flex-direction: row-reverse;
+    }
+  }
+  .hero{
+    color: white;
+    margin: 0 auto;
+    width: 72%;
+    h2{
+      width: 50%;
     }
   }
 }
