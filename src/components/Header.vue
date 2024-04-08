@@ -16,11 +16,11 @@ export default {
   <header>
 
     <div class="container ">
-      <div class="row row-cols-2 ">
-        <div class="col logo">
+      <div class="d-flex justify-content-between ">
+        <div class=" logo">
           <img src="/src/assets/img/author-logo-round-200x205.png" alt="">
         </div>
-        <div class="col navwhi">
+        <div>
           <nav class="navbar navbar-expand">
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNav">
@@ -29,22 +29,22 @@ export default {
                     <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Features</a>
+                    <a class="nav-link text-white " href="#">Abaout me</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Pricing</a>
+                    <a class="nav-link text-white " href="#">Testimonials</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Pricing</a>
+                    <a class="nav-link text-white " href="#">My blog</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Pricing</a>
+                    <a class="nav-link text-white " href="#">Meetups</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Pricing</a>
+                    <a class="nav-link text-white " href="#">Shop</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Pricing</a>
+                    <a class="nav-link text-white " href="#">Contact me</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-white " href="#"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -109,20 +109,17 @@ header{
   height: 565px;
   .container{
     img{
-      width: 30%;
+      width: 85%;
     }
-    .logo{
-      width: 40%;
+    .navbar{
+      padding: 0;
     }
-    .navwhi{
-      width: 60%;
-      .navbar{
-        padding: 0;
-      }
-    }
+    
+    
     .collapse{
       flex-direction: row-reverse;
       li{
+        font-size: $font-s;
         margin-right: 20px;
         &:hover{
           
