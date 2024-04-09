@@ -1,6 +1,8 @@
 <script>
 import {store} from '../store';
 import CardTestimonial from './subcomponents/CardTestimonial.vue'
+import AuthorInfo from './subcomponents/AuthorInfo.vue'
+import CardEvent from './subcomponents/CardEvent.vue'
 export default {
   data(){
     return{
@@ -9,6 +11,8 @@ export default {
   },
   components:{
     CardTestimonial,
+    CardEvent,
+    AuthorInfo,
   }
 }
 </script>
@@ -38,7 +42,7 @@ export default {
         <img src="../assets/img/kindle-logo-tall.png" alt="">
       </div>
     </div>
-    <div class="testimonial">
+    <div class="testimonial py-5">
       <div class="container-custom">
         <div class="d-flex justify-content-between ">
           <div>
@@ -80,6 +84,23 @@ export default {
       </div>
       
     </div>
+    <div class="event py-5">
+      <div class="text-center">
+        <h3>Upcoming Events</h3>
+        <p>meet the author in person</p>
+      </div>
+      <div class=" container d-flex py-3">
+        <CardEvent
+        v-for="card in store.eventarray"
+        :key="card.id"
+        :imgP="card.img"
+        :descP="card.desc"
+        :linckP="card.linck"
+        :titleP="card.title"
+        />
+      </div>
+    </div>
+    <AuthorInfo/>
   </main>
     
 </template>
@@ -139,7 +160,7 @@ main{
     }
   }
   .testimonial{
-    padding-top: 60px;
+   
     p{
       font-size: $font-s;
     }
@@ -171,6 +192,16 @@ main{
         background-color: $bleh-clr;
       }
     }
+  }
+  .event{
+    h3{
+      color: black;
+    }
+    p{
+      text-transform: uppercase;
+      color: $prymari-clr;
+    }
+    background-color: $bleh-clr;
   }
 }
 
