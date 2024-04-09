@@ -20,10 +20,12 @@ export default {
         <div class="card text-bg-dark">
           <img src="../../assets/img/testimonial2-2x.jpg" class="card-img" alt="...">
           <div class="card-img-overlay">
-            <h5 class="card-title">Card title</h5>
+            <h3 class="card-title">Card title</h3>
             <p>sgfaaaaaaaaaaaaaaaaaaaa</p>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <img src="../../assets\img\nytimes-logo-white-xsmall.png" alt="">
+            <span>hjgvfugkihkjhnkjhkjhkjh</span>
           </div>
         </div>
 
@@ -39,9 +41,14 @@ export default {
 @import '../../assets/scss/partials/_variables';
 @import '../../assets/scss/partials/_tipography';
 .card{
-  .cardcard-img-overlay{
-    .card-text{
-      
+  border-radius: 0px 0px 60px 0px;
+  overflow: hidden;
+  .card-img-overlay{
+    padding: 100px 70px;
+    .card-title{
+      font-weight: bold;
+      font-family: "Playfair Display", serif;
+      border-bottom: 1px solid darkgray;
     }
   }
 }
