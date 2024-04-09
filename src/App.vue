@@ -49,7 +49,7 @@ export default{
 </template>
 
 <style lang="scss">
-
-@import './assets/scss/main.scss';
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 </style>

@@ -58,7 +58,6 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/scss/partials/_variables';
 @import '../assets/scss/partials/_tipography';
-@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
 footer{
   padding: 75px 63px 75px 95px;
   font-size: 0.8rem;

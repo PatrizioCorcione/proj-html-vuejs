@@ -8,8 +8,6 @@ export default {
     }
   }
 }
-
-
 </script>
 
 <template>
@@ -95,11 +93,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap');
 @import '../assets/scss/partials/_variables';
 @import '../assets/scss/partials/_tipography';
-@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
 
 header{
   position: relative;
@@ -138,7 +133,7 @@ header{
       }
     }
   }
-  .hero{
+  .container-custom{
     color: $light-clr;
     margin: 0 auto;
     width: 72%;
