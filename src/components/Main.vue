@@ -39,7 +39,46 @@ export default {
       </div>
     </div>
     <div class="testimonial">
-      <CardTestimonial/>
+      <div class="container-custom">
+        <div class="d-flex justify-content-between ">
+          <div>
+            <h3>What The Critics Say</h3>
+            <p class="green">TESTIMONIALS FROM AROUND THE WORLD</p>
+          </div>
+          <div class="py-4" >
+            <span class="btn btn-warning">Read all testimonials</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-7">
+            <CardTestimonial/>
+          </div>
+          <div class="comics col-5">
+            <div class="text-comics text-center">
+              <h5>A True Masterpiece, Bravo!</h5>
+              <p>Nulla quis lorem ut libero malesuada feugiat.
+              Vivamus magna justo, lacinia eget consectetur
+              sed, convallis at tellus. Vivamus suscipit tortor
+              eget felis porttitor volutpat. Nulla quis lorem ut
+              libero malesuada feug at.</p>
+            </div>
+            <img src="../assets\img\theguardian-xsmall.png" alt="">
+            <span>Gerald Hendley, The Guardian</span>
+            <div class="separetor text-comics text-center">
+              <h5>A Unique View On The World</h5>
+              <p>Donec sollicitudin molestie malesuada.
+              Curabitur arcu erat, accumsan id imperdiet et,
+              porttitor at sem. Vestibulum ac diam sit amet
+              quam vehicula elementum sed sit amet dui.
+              Nulla quis lorem ut libero malesuada feugiat.
+              Vestibulum ac diam sit amet.</p>
+            </div>
+            <img src="../assets\img\globe-xsmall.png" alt="">
+            <span>Mary Maxey, The Globe And Mail</span>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </main>
     
@@ -68,6 +107,11 @@ h2{
   background-color: $success-clr;
 }
 
+h3{
+  color: $light-clr;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+}
 main{
   .references{
     background-color: $bleh-clr;
@@ -78,11 +122,6 @@ main{
   .new-audiobook{
     padding-top: 70px;
     background-image: url(/src/assets/img/banner.jpg);
-    h3{
-      color: $light-clr;
-      font-family: "Playfair Display", serif;
-      font-weight: bold;
-    }
     .text-shop{
         font-size:$font-s ;
         color: $prymari-clr;
@@ -99,7 +138,40 @@ main{
       }
     }
   }
-  
+  .testimonial{
+    padding-top: 60px;
+    p{
+      font-size: $font-s;
+    }
+    h3{
+      color: black;
+    }
+    h5{
+      font-weight: bold;
+      font-size: $font-n;
+    }
+    .green{
+      color: $secondari-clr;
+    }
+    .btn-warning{
+      padding: 5px 25px;
+      color: white;
+      font-weight: bold;
+    }
+    .comics{
+      img{
+        width: 20px;
+        margin-right: 15px;
+      }
+      .separetor{
+        margin-top: 20px;
+      }
+      .text-comics{
+        padding: 50px;
+        background-color: $bleh-clr;
+      }
+    }
+  }
 }
 
 </style>
