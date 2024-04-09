@@ -3,6 +3,8 @@ import {store} from '../store';
 import CardTestimonial from './subcomponents/CardTestimonial.vue'
 import AuthorInfo from './subcomponents/AuthorInfo.vue'
 import CardEvent from './subcomponents/CardEvent.vue'
+import EmailForm from './subcomponents/EmailForm.vue'
+import RecentArticles from './subcomponents/RecentArticles.vue'
 export default {
   data(){
     return{
@@ -13,13 +15,15 @@ export default {
     CardTestimonial,
     CardEvent,
     AuthorInfo,
+    EmailForm,
+    RecentArticles,
   }
 }
 </script>
 
 <template>
 
-  <main class="py-5">
+  <main class="pt-5">
     <div class="text-center ">
       <h2>More about Damon Vaughn</h2>
       <h5>Damon Vaughn is  professor of psychology a the university of Toronto, a clynical psychologist <br> and the author of the multi-million copy bestseller " The story of my life"</h5>
@@ -100,7 +104,13 @@ export default {
         />
       </div>
     </div>
+    <EmailForm/>
+    <div class="title-autor">
+      <h3 class="text-black">Dig A Little Deeper Into Damon Vaughn</h3>
+      <p>FIND OUT MORE ABOUT THE AUTHOR HIMSELF</p>
+    </div>
     <AuthorInfo/>
+    <RecentArticles/>
   </main>
     
 </template>
@@ -202,6 +212,14 @@ main{
       color: $prymari-clr;
     }
     background-color: $bleh-clr;
+  }
+}
+.title-autor{
+  padding-top: 50px;
+  text-align: center;
+  p{
+    text-transform: uppercase;
+    color: $secondari-clr;
   }
 }
 

@@ -66,7 +66,6 @@ img{
 .card{
   transition: all 0.4s;
   &:hover{
-    
     box-shadow: gray 5px 5px 13px 5px;
   }
   box-shadow: gray 5px 5px 5px 5px;
