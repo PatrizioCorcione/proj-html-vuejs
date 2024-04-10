@@ -5,6 +5,8 @@ import AuthorInfo from './subcomponents/AuthorInfo.vue'
 import CardEvent from './subcomponents/CardEvent.vue'
 import EmailForm from './subcomponents/EmailForm.vue'
 import RecentArticles from './subcomponents/RecentArticles.vue'
+import MoreAbout from './subcomponents/MoreAbout.vue'
+import References from './subcomponents/References.vue'
 export default {
   data(){
     return{
@@ -17,6 +19,8 @@ export default {
     AuthorInfo,
     EmailForm,
     RecentArticles,
+    MoreAbout,
+    References,
   }
 }
 </script>
@@ -24,17 +28,8 @@ export default {
 <template>
 
   <main class="pt-5">
-    <div class="text-center ">
-      <h2>More about Damon Vaughn</h2>
-      <h5>Damon Vaughn is  professor of psychology a the university of Toronto, a clynical psychologist <br> and the author of the multi-million copy bestseller " The story of my life"</h5>
-      <span class="btn btn-success my-5 border-0 ">Meet the author</span>
-    </div>
-    <div class="references d-flex justify-content-center align-items-center  py-5">
-      <img class="mx-3" src="../assets/img/ebay-logotan-2x-200x66.png" alt="">
-      <img class="mx-3" src="../assets/img/audible-logotan-2x-200x66.png" alt="">
-      <img class="mx-3" src="../assets/img/bb-logotan-2x-200x66.png" alt="">
-      <img class="mx-3" src="../assets/img/kindlefire-logotan-2x-200x66.png" alt="">
-    </div>
+    <MoreAbout/>
+    <References/>
     <div class="new-audiobook d-flex justify-content-center align-items-center ">
       <img src="../assets/img/audible-app-2x-400x418.png" alt="">
       <div class="audiobook-right text-center ">
@@ -144,12 +139,6 @@ h3{
   font-weight: bold;
 }
 main{
-  .references{
-    background-color: $bleh-clr;
-    img{
-      width: 12%;
-    }
-  }
   .new-audiobook{
     padding-top: 70px;
     background-image: url(/src/assets/img/banner.jpg);
