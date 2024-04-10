@@ -187,6 +187,11 @@ header{
           border-radius: 0px 5px 5px 0px;
           padding-right: 20px;
         }
+        .btn-apple,.btn-amazon{
+          &:hover{
+            background-color: lighten($secondari-clr,50%);
+          }
+        }
       }
     }
   }

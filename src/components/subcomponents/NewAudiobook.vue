@@ -12,7 +12,10 @@ export default {
 
 <template>
   <div class="new-audiobook d-flex justify-content-center align-items-center ">
+    <div>
+
       <img src="../../assets/img/audible-app-2x-400x418.png" alt="">
+    </div>
       <div class="audiobook-right text-center ">
         <h3>New Audiobook</h3>
         <p class="text-shop">no time to read? no problem, listen to it</p>

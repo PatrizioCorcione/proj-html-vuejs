@@ -28,6 +28,7 @@ export default {
             <img src="../../assets\img\nytimes-logo-white-xsmall.png" alt="">
             <span>Justine Kilpatrick,</span><span class="green"> The New York Times</span>
           </div>
+          <div class="bgc-black"></div>
         </div>
 </template>
 
@@ -38,7 +39,16 @@ export default {
   border-radius: 0px 0px 60px 0px;
   border: 0;
   overflow: hidden;
+  .bgc-black{
+    background: linear-gradient(to top, #00000096, #00000096 , #00000096 , #00000096 );
+    transition: all 1s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
   .card-img-overlay{
+    z-index: 999;
     img{
       width: 15px;
       margin-right: 20px;
