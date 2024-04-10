@@ -43,6 +43,7 @@ a{
   text-decoration: none;
 }
 .card{
+  cursor: pointer;
   .card-img-top{
     transition: all 1s;
   }
