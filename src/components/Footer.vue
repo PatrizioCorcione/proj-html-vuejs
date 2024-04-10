@@ -3,7 +3,7 @@ import {store} from '../store';
 export default {
   data(){
     return{
-
+      store,
     }
   }
 }
@@ -25,11 +25,11 @@ export default {
       <div class="col">
         <h3>Useful link</h3>
         <ul class="p-0 list-unstyled ">
-          <li><i class="fa-solid fa-chevron-right"></i><a href="">Latest books</a></li>
-          <li><i class="fa-solid fa-chevron-right"></i><a href="">Upcoming events</a></li>
-          <li><i class="fa-solid fa-chevron-right"></i><a href="">Recent articles</a></li>
-          <li><i class="fa-solid fa-chevron-right"></i><a href="">Business</a></li>
-          <li><i class="fa-solid fa-chevron-right"></i><a href="">Visit my foundation</a></li>
+          <li
+          v-for="usefulLink in store.usefullLink"
+          :key="usefulLink.id"
+          ><i class="fa-solid fa-chevron-right"></i><a :href=usefulLink.link>{{ usefulLink.text }}</a></li>
+          
         </ul>
       </div>
       <div class="col ">
@@ -40,11 +40,10 @@ export default {
           <li>Mobile: (800) 000-0000</li>
           <li>Email: info@you-company.com</li>
           <li>
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a 
+            v-for="footicon in store.footerIcon"
+            :key="footicon.id"
+            :href=footicon.link ><i :class='footicon.icon' class="fa-brands"></i></a>
           </li>
         </ul>
       </div>

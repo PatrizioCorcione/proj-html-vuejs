@@ -23,30 +23,16 @@ export default {
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
+                  <li 
+                  v-for="navItem in store.navbar"
+                  :key="navItem.id"
+                  class="nav-item">
+                    <a class="nav-link text-white active" aria-current="page" :href=navItem.linck >
+                      {{navItem.text}}
+                      <i :class='navItem.icon'></i>
+                    </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Abaout me</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Testimonials</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white " href="#">My blog</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Meetups</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Shop</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Contact me</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white " href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                  </li>
+                  
                 </ul>
               </div>
             </div>
@@ -129,7 +115,7 @@ header{
       }
       .fa-cart-shopping{
         font-size: $font-s;
-        line-height: 25px;
+        line-height: 18px;
       }
     }
   }
