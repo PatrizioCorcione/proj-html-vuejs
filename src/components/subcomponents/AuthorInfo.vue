@@ -45,6 +45,9 @@ export default {
   margin: 0 auto;
 }
 .title-autor{
+  h3{
+    font-family: "Playfair Display", serif;
+  }
   padding-top: 50px;
   text-align: center;
   p{

@@ -31,6 +31,9 @@ export default {
 @import '../../assets/scss/partials/_variables.scss';
 @import '../../assets/scss/partials/_tipography';
 .new-audiobook{
+  img{
+    width: 90%;
+  }
     padding-top: 70px;
     background-image: url(/src/assets/img/banner.jpg);
     .text-shop{

@@ -95,8 +95,6 @@ header{
       padding: 0;
       
     }
-    
-    
     .collapse{
       flex-direction: row-reverse;
       
@@ -108,6 +106,7 @@ header{
           
           border-top: 3px solid $prymari-clr;
           a{
+            cursor: pointer;
             color: $prymari-clr !important;
           }
         }
