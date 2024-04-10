@@ -6,7 +6,6 @@ export default {
       store,
     }
   },
- 
 }
 </script>
 

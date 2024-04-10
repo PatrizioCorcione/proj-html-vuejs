@@ -1,12 +1,13 @@
 <script>
 import {store} from '../store';
-import CardTestimonial from './subcomponents/CardTestimonial.vue'
 import AuthorInfo from './subcomponents/AuthorInfo.vue'
-import CardEvent from './subcomponents/CardEvent.vue'
 import EmailForm from './subcomponents/EmailForm.vue'
 import RecentArticles from './subcomponents/RecentArticles.vue'
 import MoreAbout from './subcomponents/MoreAbout.vue'
 import References from './subcomponents/References.vue'
+import NewAudiobook from './subcomponents/NewAudiobook.vue'
+import Testimonial from './subcomponents/Testimonial.vue'
+import UpcomingEvents from './subcomponents/UpcomingEvents.vue'
 export default {
   data(){
     return{
@@ -14,13 +15,14 @@ export default {
     }
   },
   components:{
-    CardTestimonial,
-    CardEvent,
     AuthorInfo,
     EmailForm,
     RecentArticles,
     MoreAbout,
     References,
+    NewAudiobook,
+    Testimonial,
+    UpcomingEvents,
   }
 }
 </script>
@@ -30,80 +32,10 @@ export default {
   <main class="pt-5">
     <MoreAbout/>
     <References/>
-    <div class="new-audiobook d-flex justify-content-center align-items-center ">
-      <img src="../assets/img/audible-app-2x-400x418.png" alt="">
-      <div class="audiobook-right text-center ">
-        <h3>New Audiobook</h3>
-        <p class="text-shop">no time to read? no problem, listen to it</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Velit quam autem neque ab blanditiis id aliquam vel</p>
-        <img src="../assets/img/audible-logo.png" alt="">
-        <img src="../assets/img/bn-logo-tall.png" alt="">
-        <img src="../assets/img/kindle-logo-tall.png" alt="">
-      </div>
-    </div>
-    <div class="testimonial py-5">
-      <div class="container-custom">
-        <div class="d-flex justify-content-between ">
-          <div>
-            <h3>What The Critics Say</h3>
-            <p class="green">TESTIMONIALS FROM AROUND THE WORLD</p>
-          </div>
-          <div class="py-4" >
-            <span class="btn btn-warning">Read all testimonials</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-7">
-            <CardTestimonial/>
-          </div>
-          <div class="comics col-5">
-            <div class="text-comics text-center">
-              <h5>A True Masterpiece, Bravo!</h5>
-              <p>Nulla quis lorem ut libero malesuada feugiat.
-              Vivamus magna justo, lacinia eget consectetur
-              sed, convallis at tellus. Vivamus suscipit tortor
-              eget felis porttitor volutpat. Nulla quis lorem ut
-              libero malesuada feug at.</p>
-            </div>
-            <img src="../assets\img\theguardian-xsmall.png" alt="">
-            <span>Gerald Hendley, The Guardian</span>
-            <div class="separetor text-comics text-center">
-              <h5>A Unique View On The World</h5>
-              <p>Donec sollicitudin molestie malesuada.
-              Curabitur arcu erat, accumsan id imperdiet et,
-              porttitor at sem. Vestibulum ac diam sit amet
-              quam vehicula elementum sed sit amet dui.
-              Nulla quis lorem ut libero malesuada feugiat.
-              Vestibulum ac diam sit amet.</p>
-            </div>
-            <img src="../assets\img\globe-xsmall.png" alt="">
-            <span>Mary Maxey, The Globe And Mail</span>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-    <div class="event py-5">
-      <div class="text-center">
-        <h3>Upcoming Events</h3>
-        <p>meet the author in person</p>
-      </div>
-      <div class=" container d-flex py-3">
-        <CardEvent
-        v-for="card in store.eventarray"
-        :key="card.id"
-        :imgP="card.img"
-        :descP="card.desc"
-        :linckP="card.linck"
-        :titleP="card.title"
-        />
-      </div>
-    </div>
+    <NewAudiobook/>
+    <Testimonial/>
+    <UpcomingEvents/>
     <EmailForm/>
-    <div class="title-autor">
-      <h3 class="text-black">Dig A Little Deeper Into Damon Vaughn</h3>
-      <p>FIND OUT MORE ABOUT THE AUTHOR HIMSELF</p>
-    </div>
     <AuthorInfo/>
     <RecentArticles/>
   </main>
@@ -115,101 +47,5 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/scss/partials/_variables.scss';
 @import '../assets/scss/partials/_tipography';
-
-.container-custom{
-  margin: 0 auto;
-  width: 72%;
-}
-h2{
-  line-height: 90px;
-  color: $prymari-clr;
-  font-family:"Birthstone Bounce", cursive ;
-  font-size: $font-lm;
-}
-.btn{
-  font-size: $font-ss;
-}
-.btn-success{
-  background-color: $success-clr;
-}
-
-h3{
-  color: $light-clr;
-  font-family: "Playfair Display", serif;
-  font-weight: bold;
-}
-main{
-  .new-audiobook{
-    padding-top: 70px;
-    background-image: url(/src/assets/img/banner.jpg);
-    .text-shop{
-        font-size:$font-s ;
-        color: $prymari-clr;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
-    p{
-      color: $light-clr;
-    }
-    .audiobook-right{
-      img{
-        width: 25%;
-        margin-right: 20px;
-      }
-    }
-  }
-  .testimonial{
-   
-    p{
-      font-size: $font-s;
-    }
-    h3{
-      color: black;
-    }
-    h5{
-      font-weight: bold;
-      font-size: $font-n;
-    }
-    .green{
-      color: $secondari-clr;
-    }
-    .btn-warning{
-      padding: 5px 25px;
-      color: white;
-      font-weight: bold;
-    }
-    .comics{
-      img{
-        width: 20px;
-        margin-right: 15px;
-      }
-      .separetor{
-        margin-top: 20px;
-      }
-      .text-comics{
-        padding: 50px;
-        background-color: $bleh-clr;
-      }
-    }
-  }
-  .event{
-    h3{
-      color: black;
-    }
-    p{
-      text-transform: uppercase;
-      color: $prymari-clr;
-    }
-    background-color: $bleh-clr;
-  }
-}
-.title-autor{
-  padding-top: 50px;
-  text-align: center;
-  p{
-    text-transform: uppercase;
-    color: $secondari-clr;
-  }
-}
 
 </style>

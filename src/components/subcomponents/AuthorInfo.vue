@@ -20,6 +20,10 @@ export default {
 </script>
 
 <template>
+  <div class="title-autor">
+    <h3 class="text-black">Dig A Little Deeper Into Damon Vaughn</h3>
+    <p>FIND OUT MORE ABOUT THE AUTHOR HIMSELF</p>
+  </div>
   <div class="author-info d-flex justify-content-center align-items-center py-5 ">
     <CardAuthor
     v-for="card in store.authorarray"
@@ -39,6 +43,14 @@ export default {
 .author-info{
   width: 70%;
   margin: 0 auto;
+}
+.title-autor{
+  padding-top: 50px;
+  text-align: center;
+  p{
+    text-transform: uppercase;
+    color: $secondari-clr;
+  }
 }
 
 </style>

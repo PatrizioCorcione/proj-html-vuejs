@@ -53,6 +53,7 @@ a{
     p{
       margin: 10px;
       font-size: $font-s;
+      color: $tundra-clr;
     }
     .card-text{
       border-top: 1px solid $tundraLig-clr;
