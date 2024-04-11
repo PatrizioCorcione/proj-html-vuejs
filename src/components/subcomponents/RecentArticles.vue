@@ -2,7 +2,6 @@
 export default {
   data(){
     return{
-      
     }
   },
   components:{
@@ -102,7 +101,6 @@ img{
         color: $tundra-clr;
         text-transform: capitalize;
       }
-      
       .col-4{
         padding: 40px;
         background-color: white;

@@ -7,12 +7,9 @@ export default {
     }
   }
 }
-
-
 </script>
 
 <template>
-
   <footer>
     <div class="row row-cols-4 ">
       <div class="col img-foot-size">
@@ -29,7 +26,6 @@ export default {
           v-for="usefulLink in store.usefullLink"
           :key="usefulLink.id"
           ><i class="fa-solid fa-chevron-right"></i><a :href=usefulLink.link>{{ usefulLink.text }}</a></li>
-          
         </ul>
       </div>
       <div class="col ">
@@ -49,10 +45,7 @@ export default {
       </div>
     </div>
   </footer>
-  
 </template>
-
-
 
 <style lang="scss" scoped>
 @import '../assets/scss/partials/_variables';
@@ -93,5 +86,4 @@ footer{
     }
   }
 }
-
 </style>

@@ -55,7 +55,7 @@ export const store = reactive({
     },
     {
       id:2,
-      text:'  Abaout me',
+      text:'Abaout me',
       link:'#',
       icon:''
     },
@@ -149,5 +149,6 @@ export const store = reactive({
       icon:'fa-youtube',
       link:'#',
     },
-  ]
+  ],
+  eMail:''
 });

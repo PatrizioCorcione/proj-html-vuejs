@@ -54,7 +54,6 @@ export default {
           </div>
         </div>
       </div>
-      
     </div>
 </template>
 
@@ -65,7 +64,6 @@ export default {
   .col-7{
     padding-right: 40px;
   }
-  
   .container-custom{
     margin: 0 auto;
     width: 72%;
@@ -92,7 +90,6 @@ export default {
       font-size:  $font-ss;
     }
     .comics{
-      
       img{
         width: 20px;
         margin-right: 15px;

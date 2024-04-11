@@ -6,14 +6,12 @@ export default {
       store,
     }
   },
- 
 }
 </script>
 
 <template>
   <div class="new-audiobook d-flex justify-content-center align-items-center ">
     <div>
-
       <img src="../../assets/img/audible-app-2x-400x418.png" alt="">
     </div>
       <div class="audiobook-right text-center ">
@@ -37,10 +35,10 @@ export default {
     padding-top: 70px;
     background-image: url(/src/assets/img/banner.jpg);
     .text-shop{
-        font-size:$font-s ;
-        color: $prymari-clr;
-        text-transform: uppercase;
-        font-weight: bold;
+      font-size:$font-s ;
+      color: $prymari-clr;
+      text-transform: uppercase;
+      font-weight: bold;
     }
     h3{
       font-family: "Playfair Display", serif;

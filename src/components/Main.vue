@@ -28,7 +28,6 @@ export default {
 </script>
 
 <template>
-
   <main class="pt-5">
     <MoreAbout/>
     <References/>
@@ -39,13 +38,9 @@ export default {
     <AuthorInfo/>
     <RecentArticles/>
   </main>
-    
 </template>
-
-
 
 <style lang="scss" scoped>
 @import '../assets/scss/partials/_variables.scss';
 @import '../assets/scss/partials/_tipography';
-
 </style>

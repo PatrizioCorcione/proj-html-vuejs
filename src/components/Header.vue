@@ -4,7 +4,6 @@ export default {
   data(){
     return{
       store,
-      
     }
   }
 }
@@ -12,7 +11,6 @@ export default {
 
 <template>
   <header>
-
     <div class="container ">
       <div class="d-flex justify-content-between ">
         <div class=" logo">
@@ -32,7 +30,6 @@ export default {
                       <i :class='navItem.icon'></i>
                     </a>
                   </li>
-                  
                 </ul>
               </div>
             </div>
@@ -41,9 +38,8 @@ export default {
       </div>
     </div>
     <div class="hero container-custom">
-      
         <div class="">
-          <h1>Damon Vaughn</h1>
+          <h1 id="LatastBooks">Damon Vaughn</h1>
           <h2>Beast-selling autors and the most influential public intellectual in the wester world right now.</h2>
           <p>- The New York Times</p>
           <span class="btn btn-dark ">
@@ -52,7 +48,6 @@ export default {
           <span class="btn btn-dark ">
             <i class="fa-solid fa-arrow-right"></i>
           </span>
-
         </div>
         <div class="imgbookphon">
           <div class="d-flex">
@@ -65,17 +60,13 @@ export default {
               <p class="desc-Shop">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nemo aspernatur soluta quos voluptatibus </p>
             </div>
           </div>
-
           <div class="shopBtn">
-            <span type="button" class="btn btn-outline-light btn-amazon"><i class="fa-brands fa-amazon"></i> By on Amazon</span>
-            <span type="button" class="btn btn-outline-light btn-apple"><i class="fa-brands fa-apple"></i> By on Appstore</span>
+            <a href="https://www.amazon.it/ref=nav_logo" target="_blank"><span type="button" class="btn btn-outline-light btn-amazon"><i class="fa-brands fa-amazon"></i> By on Amazon</span></a>
+            <a href="https://www.apple.com/it/store?afid=p238%7CsgD9TOpf0-dc_mtid_187079nc38483_pcrid_693115373036_pgrid_13999328447_pntwk_g_pchan__pexid__&cid=aos-it-kwgo-brand--slid--bran-product-" target="_blank"><span type="button" class="btn btn-outline-light btn-apple"><i class="fa-brands fa-apple"></i> By on Appstore</span></a>
           </div>
         </div>
     </div>
-    
-
   </header>
-  
 </template>
 
 <style lang="scss" scoped>
@@ -93,24 +84,21 @@ header{
     }
     .navbar{
       padding: 0;
-      
     }
     .collapse{
       flex-direction: row-reverse;
-      
       li{
         font-size: $font-s;
         margin-right: 10px;
         padding-top: 15px;
+        transition: all 0.2s;
         &:hover{
-          
           border-top: 3px solid $prymari-clr;
           a{
             cursor: pointer;
             color: $prymari-clr !important;
           }
         }
-        
       }
       .fa-cart-shopping{
         font-size: $font-s;
@@ -200,5 +188,4 @@ header{
     top: 182px;
   }
 }
-
 </style>

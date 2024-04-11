@@ -7,7 +7,6 @@ export default {
     }
   },
   components:{
-   
   },
   props:{
     imgP:String,
@@ -24,7 +23,6 @@ export default {
 </script>
 
 <template>
-  
   <a :href='linckP'>
     <div class="card mx-3 border-0">
       <img :src="getImagePath(imgP)" class="card-img-top rounded-0 " alt="...">
@@ -61,6 +59,4 @@ a{
     }
   }
 }
-
-
 </style>
